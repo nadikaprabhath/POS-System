@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS System</title>
+    <title>POS System - Spare Parts Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>POS System</h1>
-        <div class="products">
-            <h2>Products</h2>
-            <div id="product-list">
-                <!-- Products will be dynamically added here -->
-                 <!-- Add a search input in the product section -->
-<div class="products">
-    <h2>Products</h2>
-    <input type="text" id="search-input" placeholder="Search products..." onkeyup="filterProducts()">
-    <div id="product-list">
-        <!-- Products will be dynamically added here -->
-    </div>
-</div>
+        <h1>Spare Parts POS System</h1>
 
+        <!-- Part Management Section -->
+        <div class="part-management">
+            <h2>Manage Parts</h2>
+            <form id="part-form">
+                <input type="hidden" id="part-id">
+                <input type="text" id="part-name" placeholder="Part Name" required>
+                <input type="number" id="part-price" placeholder="Price" step="0.01" required>
+                <input type="number" id="part-quantity" placeholder="Quantity" required>
+                <button type="submit">Add Part</button>
+            </form>
+            <div id="part-list">
+                <!-- Parts will be dynamically added here -->
             </div>
         </div>
 
+        <!-- Cart Section -->
         <div class="cart">
             <h2>Cart</h2>
             <div id="cart-items">
